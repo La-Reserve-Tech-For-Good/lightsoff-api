@@ -706,20 +706,12 @@ python-versions = ">=3.7"
 test = ["pytest (>=3.0.0)"]
 
 [[package]]
-name = "wsgi-request-logger"
-version = "0.4.6"
-description = "Apache-like combined logging for WSGI Web Applications"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "zappa"
-version = "0.55.0"
+version = "0.56.1"
 description = "Server-less Python Web Services for AWS Lambda and API Gateway"
 category = "main"
 optional = false
-python-versions = ">=3.7, <3.10"
+python-versions = ">=3.7"
 
 [package.dependencies]
 argcomplete = "*"
@@ -734,13 +726,11 @@ python-dateutil = "*"
 python-slugify = "*"
 pyyaml = "*"
 requests = ">=2.20.0"
-six = "*"
 toml = "*"
 tqdm = "*"
 troposphere = ">=3.0"
 werkzeug = "*"
 wheel = "*"
-wsgi-request-logger = "*"
 
 [[package]]
 name = "zipp"
@@ -757,7 +747,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.10"
-content-hash = "e75de94455bd0b9ad43267dfa4b66f1bf5ee092b1dd89d475fae3a9027228e8a"
+content-hash = "d3ebe2e863159fb4080b03a0fcc8e26f99ea42b44dee299392990e9b63906735"
 
 [metadata.files]
 alembic = [
@@ -1276,12 +1266,9 @@ wheel = [
     {file = "wheel-0.38.2-py3-none-any.whl", hash = "sha256:7a5a3095dceca97a3cac869b8fef4e89b83fafde21b6688f47b6fda7600eb441"},
     {file = "wheel-0.38.2.tar.gz", hash = "sha256:3d492ef22379a156ec923d2a77051cedfd4df4b667864e9e41ba83f0b70b7149"},
 ]
-wsgi-request-logger = [
-    {file = "wsgi-request-logger-0.4.6.tar.gz", hash = "sha256:445d7ec52799562f812006394d0b4a7064b37084c6ea6bd74ea7a2136c97ed83"},
-]
 zappa = [
-    {file = "zappa-0.55.0-py3-none-any.whl", hash = "sha256:6a57cc1099a203092a503e87e53714a02fed8bd60642eafaf8e90a73e0368a39"},
-    {file = "zappa-0.55.0.tar.gz", hash = "sha256:9771483352b14532e390fcec1f2dd97605e830c439468ed65f147ca78d53fa88"},
+    {file = "zappa-0.56.1-py3-none-any.whl", hash = "sha256:d5ee65fab4b68f9563ccb224646ddd3c99e0e516ada78ac57417137d43700205"},
+    {file = "zappa-0.56.1.tar.gz", hash = "sha256:fd35373c81b26aa95a9b11578f83a9cf71c69c1e59183f57a009d1c082b12622"},
 ]
 zipp = [
     {file = "zipp-3.10.0-py3-none-any.whl", hash = "sha256:4fcb6f278987a6605757302a6e40e896257570d11c51628968ccb2a47e80c6c1"},
