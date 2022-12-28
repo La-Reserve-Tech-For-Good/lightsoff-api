@@ -1,5 +1,8 @@
+from unittest import mock
 from lightsoff_api import db, Place, PlaceReview
 import datetime
+
+from lightsoff_api.commands import delete_place_review
 
 
 def test_post_place_review_with_type(client):
@@ -91,8 +94,11 @@ def test_post_place_review_with_wrong_payload(client):
     assert "value is not a valid enumeration member" in response.json[0]["msg"]
 
 
-def test_delete_place_review(runner):
-
+@mock.patch("lightsoff_api.commands.app.app_context")
+def test_delete_place_review(
+    mock_app_context,
+    db_fixture,
+):
     existing_place = Place(
         report_count=8,
         google_place_id="some_id",
@@ -124,7 +130,7 @@ def test_delete_place_review(runner):
     )
     db.session.add(existing_place_review)
 
-    runner.invoke(args=["delete_place_review", f"{place_review_id_to_remove}"])
+    delete_place_review(ids=[place_review_id_to_remove])
 
     place_review_with_id_to_remove = (
         db.session.query(PlaceReview)
